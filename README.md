@@ -1,93 +1,47 @@
-Description
+# 📚 Course Management CLI App
 
-Ce projet est une application en Python qui combine :
+Un projet Python Phase 3 permettant de gérer les **étudiants**, **cours** et **inscriptions** via une **interface en ligne de commande (CLI)**, avec **SQLAlchemy ORM** et une base de données SQLite.
 
-Un ORM maison (Object-Relational Mapping) pour gérer la base de données SQLite.
+---
 
-Une interface en ligne de commande (CLI) pour interagir avec l’utilisateur.
+## ✅ Objectifs pédagogiques
 
-L’application permet de gérer des blogs et leurs posts.
-Un Blog peut contenir plusieurs Posts (relation One-to-Many).
+- Utiliser un **ORM (SQLAlchemy)** pour gérer une base relationnelle.
+- Créer une **interface CLI** conviviale et orientée utilisateur.
+- Respecter les bonnes pratiques de la **programmation orientée objet (OOP)**.
+- Modéliser une relation **one-to-many** (`Course` ↔ `Enrollment` ↔ `Student`).
 
-Fonctionnalités
+---
 
-Créer un blog
 
-Afficher tous les blogs
+## 🛠️ Installation
 
-Ajouter un post à un blog
+1. Clone le projet :
+   ```bash
+   git clone https://github.com/tonprofil/Phase3-Project.git
+   cd Phase3-Project
+Installe les dépendances :
 
-Voir les posts d’un blog
+bash
+Copier le code
+pip install sqlalchemy click
+Exécute le projet :
 
-Supprimer un blog et ses posts associés
+bash
+Copier le code
+python run.py
+▶️ Utilisation
+Une fois le programme lancé, un menu CLI s'affiche :
 
-Menu interactif avec validation des entrées
 
-Technologies utilisées
+Copier le code
+=== Course Management CLI ===
+1. View all courses
+2. Add a course
+3. View all students
+4. Add a student
+5. Enroll student to course
+6. Quit
 
-Python 3
-
-SQLite (base de données relationnelle)
-
-Pipenv (gestion d’environnement virtuel et des dépendances)
-
-Structure du projet
-phase3_project/
-│── app.py         # CLI (interface utilisateur)
-│── models.py      # ORM (classes Blog & Post)
-│── db.py          # Connexion SQLite
-│── Pipfile        # Dépendances
-│── Pipfile.lock   # Versions verrouillées
-│── README.md      # Documentation
-│── blog.db        # Base de données SQLite (créée automatiquement)
-
-Installation et exécution
-1. Cloner le projet
-git clone <url-du-repo>
-cd phase3_project
-
-2. Installer les dépendances
-pipenv install
-
-3. Activer l’environnement virtuel
-pipenv shell
-
-4. Lancer l’application
-python app.py
-
- Exemple d’utilisation
-=== Blog CLI ===
-1. Créer un blog
-2. Voir tous les blogs
-3. Ajouter un post à un blog
-4. Voir les posts d’un blog
-5. Supprimer un blog
-6. Quitter
-Choisis une option : 1
-Entrez le nom du blog : Mon Premier Blog
-Blog créé avec succès !
-
-Modèle de données
-Blog
-Attribut	Type
-id	int (PK)
-name	str
-Post
-Attribut	Type
-id	int (PK)
-title	str
-content	str
-blog_id	int (FK → Blog)
-Critères respectés
-
- Deux classes modèles (Blog, Post)
-
- Relation One-to-Many (un blog → plusieurs posts)
-
- ORM avec méthodes CRUD (create, delete, get_all, find by id)
-
- CLI avec menu interactif
-
- Bonne organisation du code et des fichiers
-
- README.md explicatif
+🧑‍💻 Auteur
+Gedeon Freycinet
